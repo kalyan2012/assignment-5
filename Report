@@ -1,0 +1,16 @@
+Thease are the times of execution for each scheduling ran 4 different times:
+
+                            RR:   2002 2004 2002 2004       Avg.run time = 2003.00
+                            FCFS: 2172 2181 2198 2190       Avg.run time = 2185.25
+                            PBS:  2008 2007 2008 2009       Avg.run time = 2008.00
+                            MLFQ: 2004 2005 2003 2004       Avg.run time = 2004.00
+
+Analysis:
+    RR, PBS, MLFQ takes least time for execution than that of FCFS. All schedulings except FCFS takes almost all same time. 
+    As FCFS is non-preemptive it's execution time is much higher.
+    Here RR and MLFq are more effective than PBS during i/o and cpu time.
+
+Exploiting in MLFQ by a process:
+    A process can exploit this by intentionally relinquishing control to cpu just before the completion of last tick for this process,
+    and get inserted in the same queue with the values reset to default. Thus remain in the same queue for entire execution and is given high priority
+    than remaining processes. 
